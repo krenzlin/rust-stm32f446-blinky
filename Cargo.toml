@@ -1,9 +1,12 @@
 [package]
 name = "blinky"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Konrad Krenzlin <git@krenzlin.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+cortex-m-rt = "0.6.10"
+panic-halt = "0.2.0"
+stm32ral = { version = "0.2.0", features = ["stm32f446"] }
