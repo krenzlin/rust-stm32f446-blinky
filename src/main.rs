@@ -18,7 +18,17 @@ fn main() -> ! {
         // 2) set OTYPER: 0 -> output push-pull
         // 3) set MODER: 01 -> general purpose output mode
         let mut led = gpioa.pa5.into_push_pull_output();
-        led.set_high().unwrap();
+
+        let gpioc = peripherals.GPIOC.split();
+        let button = gpioc.pc13;// pins are input by default
+
+        loop {
+            if button.is_high().unwrap() {
+                led.set_low().unwrap();
+            } else {
+                led.set_high().unwrap();
+            }
+        }
     }
     loop {}
 }
