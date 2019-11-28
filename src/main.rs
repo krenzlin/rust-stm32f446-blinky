@@ -20,10 +20,12 @@ fn main() -> ! {
         let mut led = gpioa.pa5.into_push_pull_output();
 
         let gpioc = peripherals.GPIOC.split();
-        let button = gpioc.pc13;// pins are input by default
+        let button = gpioc.pc13; // pins are input by default
 
         loop {
+            // .is_high reads IDR
             if button.is_high().unwrap() {
+                // .set_low uses BSRR
                 led.set_low().unwrap();
             } else {
                 led.set_high().unwrap();
