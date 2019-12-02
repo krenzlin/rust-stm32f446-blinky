@@ -8,7 +8,7 @@ prerequisites: rust, opencd
 
 0. `rustup target add thumbv7em-none-eabihf`
 
-1. `git clone https://github.com/krenzlin/rust-stm32f466-blinky`
+1. `git clone https://github.com/krenzlin/rust-stm32f446-blinky`
 2. `cd rust-stm32f466-blinky`
 3. `cargo build`
 4. `sudo ./flash_device.sh target/thumbv7em-none-eabihf/debug/blinky`
