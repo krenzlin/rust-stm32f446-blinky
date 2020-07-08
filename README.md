@@ -1,4 +1,4 @@
-Using Rust to blink an LED on an embedded device
+Using Rust to turn on an LED on an embedded device with pressing a button
 
 This example is mainly copied from the great Rust Embedded [Cortex-M Quickstart](https://github.com/rust-embedded/cortex-m-quickstart)
 and Jesse Braham's article [Embedded Rust: From Zero to Blinky](https://beta7.io/posts/embedded-rust-from-zero-to-blinky.html)
@@ -12,3 +12,4 @@ prerequisites: rust, opencd
 2. `cd rust-stm32f466-blinky`
 3. `cargo build`
 4. `sudo ./flash_device.sh target/thumbv7em-none-eabihf/debug/blinky`
+5. press user button (blue) to light up LED
